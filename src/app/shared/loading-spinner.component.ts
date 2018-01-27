@@ -1,11 +1,10 @@
-import {Component} from '@angular/core'
+import { Component, Input } from "@angular/core";
 
 @Component({
   moduleId: module.id,
-  selector: 'loading-spinner',
-  template: '<img *ngIf="loading" src="../../assets/images/loading.gif" />',
-  inputs: ['loading']
+  selector: "wb-loading-spinner",
+  template: '<img *ngIf="loading" src="../../assets/images/loading.gif" />'
 })
 export class LoadingSpinnerComponent {
-  loading:boolean
+  @Input() loading: boolean;
 }
