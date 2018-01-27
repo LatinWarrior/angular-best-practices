@@ -1,3 +1,4 @@
+
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -10,8 +11,6 @@ import { CatalogModule } from './catalog/catalog.module';
 
 import { appRoutes } from './routes'
 import { AppComponent }  from './app.component';
-import { RegisterComponent } from "./users/register.component";
-import { SignInComponent } from "./users/sign-in.component";
 
 @NgModule({
   imports:      [
@@ -25,9 +24,7 @@ import { SignInComponent } from "./users/sign-in.component";
     RouterModule.forRoot(appRoutes)
   ],
   declarations: [
-    AppComponent,    
-    RegisterComponent,
-    SignInComponent
+    AppComponent
   ],
   providers: [ 
     
