@@ -51,5 +51,9 @@ export class CatalogComponent implements OnInit {
   applyFilter(filter) {
     this.visibleClasses = this.filterClassesService.filterClasses(filter, this.classes);
   }
+
+  getCurrentUser() {
+    return this.userRepository.currentUser;
+  }
   
 }

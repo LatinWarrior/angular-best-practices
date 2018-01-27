@@ -46,7 +46,7 @@ export class UserRepositoryService {
     //   c => c.classId !== classId
     // );
     this.currentUser = Object.assign({}, this.currentUser, {
-      classes: this.currentUser.classes.filgter(c => c.classId !== classId)
+      classes: this.currentUser.classes.filter(c => c.classId !== classId)
     });
 
     return Observable.empty().delay(1000);
@@ -56,8 +56,8 @@ export class UserRepositoryService {
     //Never, ever check credentials in client-side code.
     //This code is only here to supply a fake endpoint for signing in.
     if (
-      credentials.email !== "me@whitebeards.edu" ||
-      credentials.password !== "super-secret"
+      (credentials.email !== "me@wb.com" ||
+      credentials.password !== "1234")
     )
       return Observable.throw("Invalid login");
 
