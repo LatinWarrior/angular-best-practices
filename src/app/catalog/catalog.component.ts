@@ -55,5 +55,15 @@ export class CatalogComponent implements OnInit {
   getCurrentUser() {
     return this.userRepository.currentUser;
   }
+
+  public mutateFirstProfessor() {
+    this.visibleClasses[0].professor = "Zebradude";
+  }
+
+  public updateFirstProfessor() {
+    this.visibleClasses = [ Object.assign({}, this.visibleClasses[0], {
+      professor: "Zebraton"
+    }), ...this.visibleClasses.slice(1)];
+  }
   
 }
