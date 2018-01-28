@@ -13,12 +13,15 @@ export class CatalogComponent implements OnInit {
 
   classes:any[];
   visibleClasses:any[];
+  orderByField: string;
 
   constructor(
     private userRepository: UserRepositoryService, 
     private catalogRepository: CatalogRepositoryService,
     private filterClassesService: FilterClassesService
-  ) {}
+  ) {
+    this.orderByField = '';
+  }
 
   ngOnInit() {
     this.catalogRepository.getCatalog()

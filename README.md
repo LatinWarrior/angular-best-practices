@@ -29,3 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## If having issues with compiling for production, use the following:
 ## $ ng s -o --prod --verbose --port 1234 --aot=false
+
+## to check the size of the bundles, you can install source-map-explorer.
+## $ npm install -g source-map-explorer
+
+## For the above to work, we need source maps generated.
+## $ ng build --prod --sourcemaps=true --aot=false
